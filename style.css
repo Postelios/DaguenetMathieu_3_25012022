@@ -1,10 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Shrikhand&display=swap');
+
+*{
+    font-family: roboto;
+}
+
 body{
     margin: 0px;
 }
 
-.loc{
+/*page d'accueil */
+
+/* annimation loader */
+
+.loader{
+    animation-duration: 5s;
+    animation-name: load;
+    font-size: 0px;
+}
+
+.loader .fa-utensils{
+    animation-duration: 5s;
+    animation-name: load2;
+}
+
+@keyframes load {
+    from {    
+        position: absolute;
+        z-index: 1000;
+        background-color: tomato;
+        opacity: 40%;
+        height: 250%;
+        width: 100%;
+        font-size: 100px;
+        display: flex;
+        text-align: center;
+    }
+    to {
+        position: static;
+        z-index: -10;
+        opacity: 0%;
+        height: 0%;
+    }
+  }
+
+  @keyframes load2 {
+    from {    
+        margin-top: 50%;
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        visibility: hidden;
+        font-size: 0px;
+    }
+  }
+
+/* header page d'accueil */
+
+.logo{
+    font-family: shrikhand;
+    font-size: 30px;
     display: flex;
     justify-content: center;
+}
+
+.lieu{
+    display: flex;
+    justify-content: center;
+    background-color: #EAEAEA;
+}
+
+.explorer{
+    background-color: #F6F6F6;
 }
 
 .explorer h2{
@@ -13,6 +81,7 @@ body{
     text-align: center;
     margin-left: 40px;
     margin-right: 40px;
+    margin-top: 0px;
 }
 
 .explorer p{
@@ -37,6 +106,7 @@ body{
     color: white;
 }
 
+/* partie fonctionnement */
 
 .all_f_card{
     display: flex;
@@ -54,7 +124,7 @@ body{
     justify-content: center;
     border: 1px solid;
     border-radius: 50px;
-    width: 20px;
+    width: 25px;
     position: relative;
     right: -15px;
     height: 20px;
@@ -67,24 +137,28 @@ body{
 
 .txt_f_card{
     display: flex;
-    justify-content: center;
     border: 1px solid;
     width: 100%;
     height: 60px;
     border-radius: 20px;
     font-weight: bold;
     background-color: #F6F6F6;
+    padding-left: 50px;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    align-items: ;
 }
 
 .txt_f_card:hover{
     background-color: #F5EDFF;
 }
 
-.txt_f_card p{
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-}
+
+/* card des restaurants */
 
 .restaurants{
     height: auto;
@@ -98,7 +172,8 @@ body{
     row-gap: 30px;
 }
 
-.rest_card{
+
+a .rest_card{
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -125,19 +200,24 @@ img{
 .new{
     right: 15px;
     position: absolute;
-    top: 26px;
+    top: 20px;
     border: 1px solid;
     color: #058A69;
     background-color: #99e2d0;
     font-size: 12px;
     font-weight: bold;
-    width: 50px;
+    width: 65px;
+    height: 25px;
+    padding-top: 10px;
+    text-align: center;
 }
 
 .rest_txt{
     display: flex;
     background-color: white;    
 }
+
+/* footer */
 
 footer{
     display: flex;
@@ -154,9 +234,88 @@ footer a{
 }
 
 .footer_logo{
-    height: 20px;
-    width: 150px;
-    filter: invert(1);
-    margin-bottom: 20px;
+    font-family: shrikhand;
+    font-size: 20px;
+    color: white;
 }
+
+.footer_link{
+    display: flex;
+    flex-direction: column;
+}
+
+/* version desktop accueil */
+
+@media screen and (min-width: 992px){
+
+
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+
+    .logo{
+        display: flex;
+        font-size: 50px;
+        margin-top: 30px;
+        width: 50%;
+    }
+
+    .lieu{
+        font-size: 30px;
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    .explorer{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+
+
+    .all_f_card{
+        display: flex;
+        flex-direction: row;
+    }
+    .f_card{
+        width: calc(100%/3);
+    }
+
+    .all_rest_card{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .all_rest_card a{
+        display: flex;
+        width: 50%;
+    }
+
+    .footer_logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_link{
+        display: flex;
+        flex-direction: row;
+        column-gap: 10%;
+        
+    }
+
+}
+
+
 /*# sourceMappingURL=style.css.map */
