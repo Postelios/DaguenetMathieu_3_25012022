@@ -27,30 +27,28 @@ body{
 @keyframes load {
     from {    
         z-index: 1000;
+        position: absolute;
         background-color: tomato;
-        opacity: 40%;
+        opacity: 80%;
         height: 245%;
         width: 100%;
-        font-size: 100px;
         display: flex;
         text-align: center;
     }
     to {
-        position: static;
+        position: unset;
         z-index: -10;
         opacity: 0%;
-        height: 0%;
     }
   }
 
   @keyframes load2 {
     from {    
         margin-top: 50%;
-        transform: rotate(0deg);
+        transform: rotate(360deg);
+        font-size: 200px;
     }
     to {
-        transform: rotate(360deg);
-        visibility: hidden;
         font-size: 0px;
     }
   }
@@ -191,7 +189,7 @@ a .rest_card{
     width: 100%;
 }
 
-img{
+.restaurants img{
     height: 100%;
     width: 100%;
     border-radius: 15px 15px 0px 0px;
@@ -222,6 +220,10 @@ img{
 .heart{
     display: flex;
     align-items: center;
+}
+
+.heart:hover{
+    color: linear-gradient(170deg,#EB72DA, #9F5ADB);
 }
 
 /* footer */
