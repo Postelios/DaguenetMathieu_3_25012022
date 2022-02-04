@@ -1,9 +1,17 @@
 header {
     display: flex;
     flex-direction: column;
-    .logo {
+    .top {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding-left: 20px;
+        .logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+        }
     }
     .img_header {
         width: 100%;
@@ -16,8 +24,9 @@ header {
     }
 }
 
-body{
-    position:relative;
+body {
+    position: relative;
+    background-color: #f6f6f6;
 }
 
 main {
@@ -27,9 +36,13 @@ main {
     border-top: 1px solid;
     padding: 20px;
     position: relative;
-    top: -20px;
-    background-color: white;
-    .commander{
+    margin-top: -20px;
+    background-color: #f6f6f6;
+    h3 {
+        border-bottom: 2px solid #99e2d0;
+        width: 40px;
+    }
+    .commander {
         display: flex;
         margin-left: auto;
         margin-right: auto;
@@ -37,7 +50,7 @@ main {
         height: 50px;
         justify-content: center;
         padding-top: 15px;
-        background: linear-gradient(170deg,#EB72DA, #9F5ADB);
+        background: linear-gradient(170deg, #eb72da, #9f5adb);
         border-radius: 20px;
         border: none;
         color: white;
@@ -54,19 +67,52 @@ main {
         flex-direction: column;
         row-gap: 25px;
         .eat_card {
+            height: 60px;
             border: 1px solid;
             border-radius: 15px;
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: space-between;
+            align-items: center;
             padding: 10px;
-            h4 {
-                width: 100%;
-                margin: 0px;
+            background-color: white;
+            .txt {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                h4 {
+                    width: 100%;
+                    margin: 0px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                p {
+                    margin: 0px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
             }
-            p{
-                margin: 0px;
+            .valid {
+                border: solid 1px;
+                height: 100%;
+                width: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                opacity: 0;
+                .cicle {
+                    border: solid 1px;
+                    border-radius: 50px;
+                    width: 20px;
+                    justify-content: center;
+                    display: flex;
+                }
             }
         }
     }

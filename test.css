@@ -1,0 +1,108 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+
+.textreto {
+  padding: 10px;
+  font-size: 15px;
+  width: 80%;
+}
+
+
+i.fa-heart {
+  font-size: 25px;
+}
+
+
+.coeur {
+  border: transparent 0px solid;
+  display: flex;
+  transition-duration: 1s;
+  position: relative;
+}
+.coeur__plein {
+  position: absolute;
+  opacity: 0;
+  transition-duration: 0.5s;
+  z-index: 2;
+  mix-blend-mode: lighten;
+}
+.coeur__vide {
+  z-index: 1;
+  opacity: 1;
+  transition-duration: 0.5s;
+  color: black;
+}
+.coeur:hover .coeur__plein {
+  opacity: 1;
+}
+
+
+.fiche-resto {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.carte__like--noBg {
+  opacity: 0;
+}
+
+.menu__btn {
+  width: 40%;
+  background-color: transparent;
+  border: transparent 0px solid;
+  position: relative;
+  background-color: black;
+}
+.menu__btn:hover::before {
+  opacity: 1;
+}
+.menu__btn::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.menu__like {
+  transition-duration: 0.25s;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: lighten;
+}
+.menu__btn:hover .menu__like--noBg {
+  opacity: 0;
+}
+
+
+h1 {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    padding: 20px;
+    font-size: 1.3rem;
+    margin: 0;
+    background: white;
+    resize: horizontal;
+  }
+  
+  body {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: #ccc;
+  }
+
+
+
+

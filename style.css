@@ -17,41 +17,34 @@ body{
     animation-duration: 5s;
     animation-name: load;
     font-size: 0px;
+    position: absolute;
+    display: flex;
+    text-align: center;
 }
 
 .loader .fa-utensils{
     animation-duration: 5s;
-    animation-name: load2;
+    animation-name: load;
 }
 
 @keyframes load {
     from {    
         z-index: 1000;
-        position: absolute;
         background-color: tomato;
         opacity: 80%;
-        height: 245%;
-        width: 100%;
-        display: flex;
-        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        font-size: 100px;
+        padding-top: 50%;
     }
     to {
-        position: unset;
         z-index: -10;
         opacity: 0%;
+        font-size: 0px;
+        padding-top: 0%;
     }
   }
 
-  @keyframes load2 {
-    from {    
-        margin-top: 50%;
-        transform: rotate(360deg);
-        font-size: 200px;
-    }
-    to {
-        font-size: 0px;
-    }
-  }
 
 /* header page d'accueil */
 
@@ -70,6 +63,7 @@ body{
 
 .explorer{
     background-color: #F6F6F6;
+    width: 100%;
 }
 
 .explorer h2{
@@ -161,6 +155,7 @@ body{
     background-color: #F6F6F6;
     padding-bottom: 50px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .all_rest_card{
@@ -170,7 +165,7 @@ body{
 }
 
 .all_rest_card a{
-    width: calc(100% - 20px);
+    width: 100%;
     text-decoration: none;
 }
 
@@ -179,7 +174,8 @@ a .rest_card{
     flex-direction: column;
     height: 200px;
     width: 100%;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius:15px ;
     box-shadow: 0px 0px 6px 0px #0000002e;
 }
 
@@ -214,16 +210,23 @@ a .rest_card{
 .rest_txt{
     display: flex;
     background-color: white;  
-    justify-content: space-between;  
+    justify-content: space-between; 
+    color: black;
+    padding-left: 10px;
+}
+
+.name{
+    font-weight: bold;
 }
 
 .heart{
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
 
-.heart:hover{
-    color: linear-gradient(170deg,#EB72DA, #9F5ADB);
+.heart :hover{
+    background: linear-gradient(170deg,#EB72DA, #9F5ADB);
 }
 
 /* footer */
@@ -276,6 +279,7 @@ footer a{
         font-size: 30px;
         width: 50%;
         margin-top: 50px;
+        background-color: unset;
     }
 
     .explorer{
