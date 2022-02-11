@@ -46,6 +46,7 @@ body{
   }
 
 
+
 /* header page d'accueil */
 
 .logo{
@@ -211,6 +212,7 @@ a .rest_card{
     display: flex;
     background-color: white;  
     justify-content: space-between; 
+    align-items: center;
     color: black;
     padding-left: 10px;
 }
@@ -219,15 +221,7 @@ a .rest_card{
     font-weight: bold;
 }
 
-.heart{
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
 
-.heart :hover{
-    background: linear-gradient(170deg,#EB72DA, #9F5ADB);
-}
 
 /* footer */
 

@@ -47,6 +47,38 @@ body {
   background-color: #f6f6f6;
 }
 
+body .heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+body .vide {
+  position: absolute;
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+body .vide:hover {
+  color: transparent;
+  mix-blend-mode: lighten;
+  background: linear-gradient(170deg, #EB72DA, #9F5ADB);
+}
+
+body .plein {
+  color: transparent;
+}
+
+body .heart:hover > .plein {
+  color: black;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,6 +135,10 @@ main .title {
           align-items: center;
 }
 
+main .menu {
+  opacity: 0;
+}
+
 main .all_eat_card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,7 +152,7 @@ main .all_eat_card {
 
 main .all_eat_card .eat_card {
   height: 60px;
-  border: 1px solid;
+  border: none;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,17 +163,60 @@ main .all_eat_card .eat_card {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  background-color: white;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  position: relative;
+}
+
+main .all_eat_card .eat_card:hover .valid {
+  width: 60px;
+}
+
+main .all_eat_card .eat_card:hover .circle {
+  font-size: 30px;
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+}
+
+main .all_eat_card .eat_card .all_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
-  background-color: white;
+  width: 99%;
+  margin-left: 15px;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition-property: width;
+  transition-property: width;
 }
 
-main .all_eat_card .eat_card .txt {
+main .all_eat_card .eat_card .all_txt:hover {
+  width: calc(99% - 60px);
+}
+
+main .all_eat_card .eat_card .all_txt .prix {
+  margin-right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+main .all_eat_card .eat_card .all_txt .txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,9 +226,10 @@ main .all_eat_card .eat_card .txt {
           flex-direction: column;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-right: 20px;
 }
 
-main .all_eat_card .eat_card .txt h4 {
+main .all_eat_card .eat_card .all_txt .txt h4 {
   width: 100%;
   margin: 0px;
   overflow: hidden;
@@ -157,15 +237,15 @@ main .all_eat_card .eat_card .txt h4 {
   white-space: nowrap;
 }
 
-main .all_eat_card .eat_card .txt p {
+main .all_eat_card .eat_card .all_txt p.plat {
   margin: 0px;
+  margin-top: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 main .all_eat_card .eat_card .valid {
-  border: solid 1px;
   height: 100%;
   width: 0px;
   display: -webkit-box;
@@ -179,18 +259,112 @@ main .all_eat_card .eat_card .valid {
           align-items: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  opacity: 0;
+  opacity: 1;
+  color: white;
+  background-color: #99E2D0;
+  font-size: 0px;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+  -webkit-transition-property: width;
+  transition-property: width;
+  position: absolute;
+  right: 0px;
 }
 
-main .all_eat_card .eat_card .valid .cicle {
-  border: solid 1px;
-  border-radius: 50px;
-  width: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+main .all_eat_card .eat_card .circle {
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+  -webkit-transition-property: font-size, -webkit-transform;
+  transition-property: font-size, -webkit-transform;
+  transition-property: font-size, transform;
+  transition-property: font-size, transform, -webkit-transform;
+}
+
+.one {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: apparition;
+          animation-name: apparition;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.two {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: apparition;
+          animation-name: apparition;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.three {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: apparition;
+          animation-name: apparition;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  main .all_eat_card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  main .step {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main h3 {
+    width: auto;
+  }
+  main .all_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
+  }
+  main .menu {
+    width: calc(100%/3 - 50px/3);
+  }
 }
 /*# sourceMappingURL=style1.css.map */

@@ -27,6 +27,33 @@ header {
 body {
     position: relative;
     background-color: #f6f6f6;
+    .heart{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+    }
+    
+    .vide{
+        position: absolute;
+        opacity: 1;
+        transition-duration: 1s;
+    }
+    
+    .vide:hover{
+        color: transparent;
+        mix-blend-mode: lighten;
+        background: linear-gradient(170deg,#EB72DA, #9F5ADB);
+    }
+    
+    .plein{
+        color: transparent;
+    }
+    
+    .heart:hover > .plein{
+        color: black;
+    }
+    
 }
 
 main {
@@ -62,26 +89,58 @@ main {
         justify-content: space-between;
         align-items: center;
     }
+    .menu{
+        opacity: 0;
+    }
+    
+  
     .all_eat_card {
         display: flex;
         flex-direction: column;
         row-gap: 25px;
         .eat_card {
             height: 60px;
-            border: 1px solid;
+            border: none;
             border-radius: 15px;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
             background-color: white;
+            transform-origin: right;
+            position: relative;
+            &:hover .valid {
+                width: 60px;
+            }
+            &:hover .circle{
+                font-size: 30px;
+                transform: rotate(1turn);
+            }
+            .all_txt{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 99%;
+                margin-left: 15px;
+                transition-duration: 3s;
+                transform-origin: left;
+                transition-property: width;
+                &:hover {
+                    width: calc(99% - 60px);
+                }            
+                .prix{
+                    margin-right: 25px;
+                    display: flex;
+                    align-items: flex-end;
+                    height: 100%;
+                    margin-top: 0px;
+                    margin-bottom: 15px;
+                }
             .txt {
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                margin-right: 20px;
                 h4 {
                     width: 100%;
                     margin: 0px;
@@ -89,15 +148,16 @@ main {
                     text-overflow: ellipsis;
                     white-space: nowrap;
                 }
-                p {
+            }
+                p.plat {
                     margin: 0px;
+                    margin-top: 5px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                 }
             }
             .valid {
-                border: solid 1px;
                 height: 100%;
                 width: 0px;
                 display: flex;
@@ -105,15 +165,81 @@ main {
                 align-items: center;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
-                opacity: 0;
-                .cicle {
-                    border: solid 1px;
-                    border-radius: 50px;
-                    width: 20px;
-                    justify-content: center;
-                    display: flex;
-                }
+                opacity: 1;
+                color: white;
+                background-color: #99E2D0;
+                font-size: 0px;
+                transition-duration: 3s;
+                transition-property: width;
+                position: absolute;
+                right: 0px;
+            }
+            .circle{
+                transition-duration: 3s;
+                transition-property: font-size, transform;
             }
         }
     }
+}
+
+.one {
+    animation-duration: 1s;
+    animation-name: apparition;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+.two {
+    animation-duration: 1s;
+    animation-name: apparition;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+.three {
+    animation-duration: 1s;
+    animation-name: apparition;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes apparition{
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px){
+    main{
+        .all_eat_card{
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 25px;
+    }
+}
+}
+
+@media (min-width: 992px){
+main{
+    .step{
+        display: flex;
+        justify-content: center;
+    }
+    h3{
+        width: auto;
+    }
+    .all_menu{
+    display: flex;
+    column-gap: 25px;
+}
+.menu{
+    width: calc(100%/3 - 50px/3);
+}
+}
 }
