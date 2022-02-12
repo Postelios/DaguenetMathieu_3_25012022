@@ -127,10 +127,8 @@ i.fa-heart {
 .btest{
   position: relative;
   background: white;
-}
-
-.b{
   font-size: 70px;
+  display: inline-block;
 }
 
 .b::before{
@@ -172,3 +170,16 @@ i.fa-heart {
 	position: absolute;
 	top:30px;
 }
+
+.triangle2{
+  margin-top: 30px;
+  width: 1px;
+height: 1px;
+border: 1px solid #069;
+border-color: #069 transparent transparent transparent;
+border-width: 100px;
+border-left-width: 0px;
+border-top-width: 25px;
+}
+
+

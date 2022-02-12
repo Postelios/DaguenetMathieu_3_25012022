@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Shrikhand&display=swap');
+
+*{
+    font-family: roboto;
+}
+
+body{
+    margin: 0px;
+    
+    .logo {
+        font-family: shrikhand;
+        font-size: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    .heart{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+    }
+    
+    .vide{
+        position: absolute;
+        opacity: 1;
+    }
+    
+    .vide:hover{
+        color: transparent;
+        mix-blend-mode: lighten;
+        background: linear-gradient(170deg,#EB72DA, #9F5ADB);
+    }
+    
+    .plein{
+        color: transparent;
+        transition-duration: 1s;
+    }
+    
+    .heart:hover > .plein{
+        color: black;
+    }
+
+    
+    
+   /* footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer_logo{
+    font-family: shrikhand;
+    font-size: 20px;
+    color: white;
+}
+
+.footer_link{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+
+
+    }
+
+    @media screen and (min-width: 768px){
+    
+    footer{
+        margin-left: -75px;
+    }
+    
+    .footer_logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_link{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;        
+    }
+}
+}
+

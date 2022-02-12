@@ -1,60 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Shrikhand&display=swap');
-
-*{
-    font-family: roboto;
-}
-
-body{
-    margin: 0px;
-}
 
 /*page d'accueil */
 
 /* annimation loader */
 
-.loader{
-    animation-duration: 5s;
-    animation-name: load;
+.loader{    
+    background-color: white;
+    height: 100vh;
+    width: 100%;
     font-size: 0px;
     position: absolute;
     display: flex;
-    text-align: center;
+    color: red;    
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    animation-duration: 1s;
+    animation-name: load;
+    animation-fill-mode: forwards;
 }
 
-.loader .fa-utensils{
-    animation-duration: 5s;
-    animation-name: load;
-}
 
 @keyframes load {
-    from {    
-        z-index: 1000;
-        background-color: tomato;
-        opacity: 80%;
-        height: 100vh;
-        width: 100vw;
-        font-size: 100px;
-        padding-top: 50%;
+    0% {    
+        z-index: 10;
+        font-size: 250px;
+        opacity: 1;
+    /*    transform: rotate(1turn); */
     }
-    to {
-        z-index: -10;
-        opacity: 0%;
+    98%{
+        z-index: 10;
+        opacity: 1;
         font-size: 0px;
-        padding-top: 0%;
+    }
+    100% {
+        z-index: -1;
+        font-size: 0px;
+        opacity: 0;
     }
   }
 
 
 
 /* header page d'accueil */
-
-.logo{
-    font-family: shrikhand;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
 
 .lieu{
     display: flex;
@@ -223,53 +210,27 @@ a .rest_card{
 
 
 
-/* footer */
-
-footer{
-    display: flex;
-    flex-direction: column;
-    background-color: #353535;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-footer a{
-    text-decoration: none;
-    color: white;
-}
-
-.footer_logo{
-    font-family: shrikhand;
-    font-size: 20px;
-    color: white;
-}
-
-.footer_link{
-    display: flex;
-    flex-direction: column;
-}
 
 /* version desktop accueil */
 
 @media screen and (min-width: 992px){
 
 
-    header{
+    body header{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         
     }
 
-    .logo{
+    body .logo{
         display: flex;
         font-size: 50px;
         margin-top: 30px;
         width: 50%;
     }
 
-    .lieu{
+    body .lieu{
         font-size: 30px;
         width: 50%;
         margin-top: 50px;
@@ -309,18 +270,6 @@ footer a{
     .all_rest_card a{
         display: flex;
         width: calc(50% - 10px);
-    }
-
-    .footer_logo{
-        display: flex;
-        justify-content: center;
-    }
-
-    .footer_link{
-        display: flex;
-        flex-direction: row;
-        column-gap: 10%;
-        
     }
 
 }

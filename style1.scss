@@ -6,12 +6,7 @@ header {
         align-items: center;
         background-color: white;
         padding-left: 20px;
-        .logo {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 0px;
-        }
+
     }
     .img_header {
         width: 100%;
@@ -26,34 +21,7 @@ header {
 
 body {
     position: relative;
-    background-color: #f6f6f6;
-    .heart{
-        display: flex;
-        align-items: center;
-        margin-right: 20px;
-        position: relative;
-    }
-    
-    .vide{
-        position: absolute;
-        opacity: 1;
-        transition-duration: 1s;
-    }
-    
-    .vide:hover{
-        color: transparent;
-        mix-blend-mode: lighten;
-        background: linear-gradient(170deg,#EB72DA, #9F5ADB);
-    }
-    
-    .plein{
-        color: transparent;
-    }
-    
-    .heart:hover > .plein{
-        color: black;
-    }
-    
+    background-color: #f6f6f6;    
 }
 
 main {

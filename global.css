@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Shrikhand&display=swap");
+* {
+  font-family: roboto;
+}
+
+body {
+  margin: 0px;
+  /* footer */
+}
+
+body .logo {
+  font-family: shrikhand;
+  font-size: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0px;
+}
+
+body .heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+body .vide {
+  position: absolute;
+  opacity: 1;
+}
+
+body .vide:hover {
+  color: transparent;
+  mix-blend-mode: lighten;
+  background: linear-gradient(170deg, #EB72DA, #9F5ADB);
+}
+
+body .plein {
+  color: transparent;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+body .heart:hover > .plein {
+  color: black;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #353535;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+body footer a {
+  text-decoration: none;
+  color: white;
+}
+
+body .footer_logo {
+  font-family: shrikhand;
+  font-size: 20px;
+  color: white;
+}
+
+body .footer_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  body footer {
+    margin-left: -75px;
+  }
+  body .footer_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .footer_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+/*# sourceMappingURL=global.css.map */
