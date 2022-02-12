@@ -10,7 +10,7 @@ body {
 
 body .logo {
   font-family: shrikhand;
-  font-size: 30px;
+  font-size: 35px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +19,10 @@ body .logo {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 0px;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .heart {
@@ -62,9 +66,7 @@ body footer {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #353535;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 20px 30px 20px;
 }
 
 body footer a {
