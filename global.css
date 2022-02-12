@@ -41,17 +41,17 @@ body .vide {
 body .vide:hover {
   color: transparent;
   mix-blend-mode: lighten;
-  background: linear-gradient(170deg, #EB72DA, #9F5ADB);
+  background: linear-gradient(170deg, #eb72da, #9f5adb);
 }
 
 body .plein {
   color: transparent;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
 }
 
 body .heart:hover > .plein {
   color: black;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 body footer {
@@ -91,9 +91,10 @@ body .footer_link {
 
 @media screen and (min-width: 768px) {
   body footer {
-    margin-left: -75px;
+    padding-left: 0px;
   }
   body .footer_logo {
+    margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -109,9 +110,10 @@ body .footer_link {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 40px 0;
   }
 }
 /*# sourceMappingURL=global.css.map */

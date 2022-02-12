@@ -6,7 +6,6 @@ header {
         align-items: center;
         background-color: white;
         padding-left: 20px;
-
     }
     .img_header {
         width: 100%;
@@ -21,7 +20,7 @@ header {
 
 body {
     position: relative;
-    background-color: #f6f6f6;    
+    background-color: #f6f6f6;
 }
 
 main {
@@ -57,11 +56,10 @@ main {
         justify-content: space-between;
         align-items: center;
     }
-    .menu{
+    .menu {
         opacity: 0;
     }
-    
-  
+
     .all_eat_card {
         display: flex;
         flex-direction: column;
@@ -79,11 +77,11 @@ main {
             &:hover .valid {
                 width: 60px;
             }
-            &:hover .circle{
+            &:hover .circle {
                 font-size: 30px;
                 transform: rotate(1turn);
             }
-            .all_txt{
+            .all_txt {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -94,8 +92,8 @@ main {
                 transition-property: width;
                 &:hover {
                     width: calc(99% - 60px);
-                }            
-                .prix{
+                }
+                .prix {
                     margin-right: 25px;
                     display: flex;
                     align-items: flex-end;
@@ -103,20 +101,20 @@ main {
                     margin-top: 0px;
                     margin-bottom: 15px;
                 }
-            .txt {
-                display: flex;
-                flex-direction: column;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                margin-right: 20px;
-                h4 {
-                    width: 100%;
-                    margin: 0px;
+                .txt {
+                    display: flex;
+                    flex-direction: column;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    white-space: nowrap;
+                    margin-right: 20px;
+                    h4 {
+                        width: 100%;
+                        margin: 0px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
-            }
                 p.plat {
                     margin: 0px;
                     margin-top: 5px;
@@ -135,14 +133,14 @@ main {
                 border-bottom-right-radius: 15px;
                 opacity: 1;
                 color: white;
-                background-color: #99E2D0;
+                background-color: #99e2d0;
                 font-size: 0px;
                 transition-duration: 3s;
                 transition-property: width;
                 position: absolute;
                 right: 0px;
             }
-            .circle{
+            .circle {
                 transition-duration: 3s;
                 transition-property: font-size, transform;
             }
@@ -171,43 +169,52 @@ main {
     animation-fill-mode: forwards;
 }
 
-
-@keyframes apparition{
+@keyframes apparition {
     from {
         opacity: 0;
     }
 
-    to{
+    to {
         opacity: 1;
     }
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+    main {
+        .all_eat_card {
+            flex-wrap: wrap;
+            flex-direction: row;
+            column-gap: 25px;
+        }
+    }
+}
 
-@media (min-width: 768px) and (max-width: 992px){
-    main{
-        .all_eat_card{
-        flex-wrap: wrap;
-        flex-direction: row;
-        column-gap: 25px;
+@media (min-width: 768px) and (max-width: 992px) {
+    main {
+        .all_eat_card {
+            justify-content: center;
+            .eat_card {
+                width: calc(100% / 3 - 20px);
+            }
+        }
     }
-}
 }
 
-@media (min-width: 992px){
-main{
-    .step{
-        display: flex;
-        justify-content: center;
+@media (min-width: 992px) {
+    main {
+        .step {
+            display: flex;
+            justify-content: center;
+        }
+        h3 {
+            width: auto;
+        }
+        .all_menu {
+            display: flex;
+            column-gap: 25px;
+        }
+        .menu {
+            width: calc(100% / 3 - 50px / 3);
+        }
     }
-    h3{
-        width: auto;
-    }
-    .all_menu{
-    display: flex;
-    column-gap: 25px;
-}
-.menu{
-    width: calc(100%/3 - 50px/3);
-}
-}
 }

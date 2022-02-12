@@ -218,7 +218,7 @@ main .all_eat_card .eat_card .valid {
   border-bottom-right-radius: 15px;
   opacity: 1;
   color: white;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   font-size: 0px;
   -webkit-transition-duration: 3s;
           transition-duration: 3s;
@@ -301,6 +301,17 @@ main .all_eat_card .eat_card .circle {
   }
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  main .all_eat_card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .all_eat_card .eat_card {
+    width: calc(100% / 3 - 20px);
+  }
+}
+
 @media (min-width: 992px) {
   main .step {
     display: -webkit-box;
@@ -321,7 +332,7 @@ main .all_eat_card .eat_card .circle {
             column-gap: 25px;
   }
   main .menu {
-    width: calc(100%/3 - 50px/3);
+    width: calc(100% / 3 - 50px / 3);
   }
 }
 /*# sourceMappingURL=style1.css.map */
