@@ -4,7 +4,7 @@
 
 .load{
     font-family: shrikhand;
-    font-size: 50px;
+    font-size: 25px;
     animation: loading 4s;
     position: relative;
     display: inline-block;
@@ -52,6 +52,7 @@
 }
 
 .anim{
+    display: none;
     position: relative;
     animation: roule;
     animation-duration: 4s;
@@ -339,6 +340,10 @@ a .rest_card {
 
 @media screen and (min-width: 768px) and (max-width: 1050px) {
 
+.load{
+    font-size: 50px;
+}
+
 .txt_f_card{
     column-gap: 25px;
     padding: 0 25px 0 35px;
@@ -346,6 +351,11 @@ a .rest_card {
 }
 
 @media screen and (min-width: 768px) {
+
+    .load{
+        font-size: 80px;
+    }
+
     body header {
         display: flex;
         flex-direction: row;
