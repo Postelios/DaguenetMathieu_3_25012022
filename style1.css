@@ -92,6 +92,10 @@ main .title {
           align-items: center;
 }
 
+main .title h2 {
+  font-family: shrikhand;
+}
+
 main .menu {
   opacity: 0;
 }

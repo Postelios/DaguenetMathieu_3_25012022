@@ -8,30 +8,113 @@
     width: 100%;
     font-size: 0px;
     position: absolute;
+    font-size: 30px;
     display: flex;
-    color: red;
     justify-content: center;
     align-items: center;
-    animation-duration: 3s;
+    animation-duration: 10003s;
     animation-name: load;
     animation-fill-mode: forwards;
 }
 
+.anim{
+    position: relative;
+    animation: roule;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: 4;
+}
+
+.anim div{
+    position: absolute;
+    animation-name: loadcircle;
+    animation-duration: 0.8s;
+    color: rgb(228, 228, 178);
+    animation-iteration-count: 22;
+}
+
+.anim div:nth-child(1){
+    top: 50px;
+    animation-delay: 0s;
+}
+
+.anim div:nth-child(2){
+    top: 25px;
+    right: 25px;
+    animation-delay: -0.1s;
+}
+
+.anim div:nth-child(3){
+    bottom: 25px;
+    right: 25px;
+    animation-delay: -0.2s;
+}
+
+.anim div:nth-child(4){
+    bottom: 50px;
+    animation-delay: -0.3s;
+}
+
+.anim div:nth-child(5){
+    left: 45px;
+    bottom: 25px;
+    animation-delay: -0.4s;
+}
+
+.anim div:nth-child(6){
+    top: 25px;
+    left: 45px;
+    animation-delay: -0.5s;
+}
+
+.anim div:nth-child(7){
+    right: 50px;
+    top: -10px;
+    animation-delay: -0.6s;
+}
+
+.anim div:nth-child(8){
+    top: -10px;
+    left: 60px;
+    animation-delay: -0.7s;
+}
+
+@keyframes roule {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes loadcircle {
+        0%, 20%, 80%, 100% {
+          transform: scale(1);
+          color: rgb(228, 228, 178);
+        }
+        50% {
+          transform: scale(1.5);
+          color: red;
+        }
+}
+
+
+
 @keyframes load {
     0% {
         z-index: 10;
-        font-size: 250px;
         opacity: 1;
         /*    transform: rotate(1turn); */
     }
     98% {
         z-index: 10;
         opacity: 1;
-        font-size: 0px;
+        
     }
     100% {
         z-index: -1;
-        font-size: 0px;
         opacity: 0;
     }
 }
