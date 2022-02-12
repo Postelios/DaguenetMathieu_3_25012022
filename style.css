@@ -156,12 +156,13 @@
 
 /* header page d'accueil */
 
-.lieu {
+body .lieu {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #eaeaea; 
     box-shadow: inset 0px 3px 5px 0 #c1c1c19e;
+    height: 80px;
     width: 100%;
     font-weight: bold;
     column-gap: 20px;
@@ -363,6 +364,7 @@ a .rest_card {
         flex-wrap: wrap;
     }
 
+
     body .logo {
         display: flex;
         font-size: 50px;
@@ -373,8 +375,10 @@ a .rest_card {
     body .lieu {
         font-size: 30px;
         width: 50%;
+        height: 80px;
         background-color: unset;
         align-items: center;
+        box-shadow: none;
     }
 
     .explorer {
