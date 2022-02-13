@@ -81,12 +81,12 @@ main {
             flex-wrap: nowrap;
             background-color: white;
             overflow: hidden;
-            transition: 2s;
+            transition: 1s;
             &:hover .valid {
                 width: 60px;
             }
             &:hover .circle {
-                font-size: 30px;
+                font-size: 20px;
                 transform: rotate(1turn);
             }
             .all_txt {
@@ -95,7 +95,7 @@ main {
                 align-items: center;
                 width: 100%;
                 padding-left: 15px;
-                transition-duration: 2s;
+                transition-duration: 1s;
                 transform-origin: left;
                 transition-property: width;
                 &:hover {
@@ -120,7 +120,7 @@ main {
                     text-overflow: ellipsis;
                     margin-right: 20px;
                     width: 100%;
-                    transition: 2s;
+                    transition: 1s;
                     &:hover{
                         width: calc(100% - 60px);
                     }
@@ -149,11 +149,11 @@ main {
                 color: white;
                 background-color: #99e2d0;
                 font-size: 0px;
-                transition-duration: 3s;
+                transition-duration: 1s;
                 transition-property: width;
             }
             .circle {
-                transition-duration: 3s;
+                transition-duration: 0.8s;
                 transition-property: font-size, transform;
             }
         }

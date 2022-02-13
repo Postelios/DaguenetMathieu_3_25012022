@@ -133,8 +133,8 @@ main .all_eat_card .eat_card {
       flex-wrap: nowrap;
   background-color: white;
   overflow: hidden;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 main .all_eat_card .eat_card:hover .valid {
@@ -142,7 +142,7 @@ main .all_eat_card .eat_card:hover .valid {
 }
 
 main .all_eat_card .eat_card:hover .circle {
-  font-size: 30px;
+  font-size: 20px;
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
 }
@@ -159,8 +159,8 @@ main .all_eat_card .eat_card .all_txt {
           align-items: center;
   width: 100%;
   padding-left: 15px;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transition-property: width;
@@ -201,8 +201,8 @@ main .all_eat_card .eat_card .all_txt .txt {
   text-overflow: ellipsis;
   margin-right: 20px;
   width: 100%;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 main .all_eat_card .eat_card .all_txt .txt:hover {
@@ -240,15 +240,15 @@ main .all_eat_card .eat_card .valid {
   color: white;
   background-color: #99e2d0;
   font-size: 0px;
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   -webkit-transition-property: width;
   transition-property: width;
 }
 
 main .all_eat_card .eat_card .circle {
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
   -webkit-transition-property: font-size, -webkit-transform;
   transition-property: font-size, -webkit-transform;
   transition-property: font-size, transform;
