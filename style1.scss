@@ -92,8 +92,8 @@ main {
                 justify-content: space-between;
                 align-items: center;
                 width: 99%;
-                margin-left: 15px;
-                transition-duration: 3s;
+                padding-left: 15px;
+                transition-duration: 2s;
                 transform-origin: left;
                 transition-property: width;
                 &:hover {
@@ -143,9 +143,9 @@ main {
                 background-color: #99e2d0;
                 font-size: 0px;
                 transition-duration: 3s;
-                transition-property: width;
-                position: absolute;
-                right: 0px;
+                transition-property: width, transform;
+               /* position: absolute;
+                right: 0px; */
             }
             .circle {
                 transition-duration: 3s;
