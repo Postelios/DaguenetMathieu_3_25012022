@@ -307,13 +307,8 @@ main .all_eat_card .eat_card .circle {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  main .all_eat_card {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  main .all_eat_card .eat_card {
-    width: calc(100% / 3 - 20px);
+  main .eat_card {
+    width: calc(100% / 2 - 20px);
   }
 }
 

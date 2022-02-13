@@ -2,7 +2,7 @@
 
 /* annimation loader */
 
-.load{
+.load {
     font-family: shrikhand;
     font-size: 25px;
     animation: loading 4s;
@@ -11,27 +11,26 @@
     background: white;
     color: white;
     animation-delay: 1s;
-  }
+}
 
-  .load .txt{
-      margin: 25px;
-  }
-  
-  .load::before{
+.load .txt {
+    margin: 25px;
+}
+
+.load::before {
     content: "";
     position: absolute;
     background: linear-gradient(#eb72da, #9f5adb);
     height: 100%;
     width: 100%;
     mix-blend-mode: lighten;
-  }
+}
 
-@keyframes loading{
-
-    from{
+@keyframes loading {
+    from {
         color: #eaeaea;
     }
-    to{
+    to {
         color: rgb(88, 3, 3);
     }
 }
@@ -51,7 +50,7 @@
     animation-fill-mode: forwards;
 }
 
-.anim{
+.anim {
     display: none;
     position: relative;
     animation: roule;
@@ -60,7 +59,7 @@
     animation-iteration-count: 4;
 }
 
-.anim div{
+.anim div {
     position: absolute;
     animation-name: loadcircle;
     animation-duration: 0.8s;
@@ -68,74 +67,74 @@
     animation-iteration-count: 22;
 }
 
-.anim div:nth-child(1){
+.anim div:nth-child(1) {
     top: 50px;
     animation-delay: 0s;
 }
 
-.anim div:nth-child(2){
+.anim div:nth-child(2) {
     top: 25px;
     right: 25px;
     animation-delay: -0.1s;
 }
 
-.anim div:nth-child(3){
+.anim div:nth-child(3) {
     bottom: 25px;
     right: 25px;
     animation-delay: -0.2s;
 }
 
-.anim div:nth-child(4){
+.anim div:nth-child(4) {
     bottom: 50px;
     animation-delay: -0.3s;
 }
 
-.anim div:nth-child(5){
+.anim div:nth-child(5) {
     left: 45px;
     bottom: 25px;
     animation-delay: -0.4s;
 }
 
-.anim div:nth-child(6){
+.anim div:nth-child(6) {
     top: 25px;
     left: 45px;
     animation-delay: -0.5s;
 }
 
-.anim div:nth-child(7){
+.anim div:nth-child(7) {
     right: 50px;
     top: -10px;
     animation-delay: -0.6s;
 }
 
-.anim div:nth-child(8){
+.anim div:nth-child(8) {
     top: -10px;
     left: 60px;
     animation-delay: -0.7s;
 }
 
 @keyframes roule {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
 
-
 @keyframes loadcircle {
-        0%, 20%, 80%, 100% {
-          transform: scale(1);
-          color: rgb(228, 228, 178);
-        }
-        50% {
-          transform: scale(1.5);
-          color: red;
-        }
+    0%,
+    20%,
+    80%,
+    100% {
+        transform: scale(1);
+        color: rgb(228, 228, 178);
+    }
+    50% {
+        transform: scale(1.5);
+        color: red;
+    }
 }
-
-
 
 @keyframes load {
     0% {
@@ -146,7 +145,6 @@
     98% {
         z-index: 10;
         opacity: 1;
-        
     }
     100% {
         z-index: -1;
@@ -156,17 +154,17 @@
 
 /* header page d'accueil */
 
-    .lieu {
+.lieu {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eaeaea; 
+    background-color: #eaeaea;
     box-shadow: inset 0px 3px 5px 0 #c1c1c19e;
     width: 100%;
     font-weight: bold;
     column-gap: 20px;
     font-size: 18px;
-    height: 60px;   
+    height: 60px;
 }
 
 .explorer {
@@ -331,29 +329,25 @@ a .rest_card {
     font-weight: bold;
 }
 
-.heart{
+.heart {
     font-size: 25px;
 }
 
 /* version tablette desktop accueil */
 
-
 @media screen and (min-width: 768px) and (max-width: 1050px) {
+    .txt_f_card {
+        column-gap: 25px;
+        padding: 0 25px 0 35px;
+    }
 
-.txt_f_card{
-    column-gap: 25px;
-    padding: 0 25px 0 35px;
-}
-
-.num{
-    width: 45px;
-}
-
+    .num {
+        width: 45px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-
-    .load{
+    .load {
         font-size: 80px;
     }
 
@@ -362,7 +356,6 @@ a .rest_card {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
 
     body .logo {
         display: flex;
@@ -400,7 +393,6 @@ a .rest_card {
     .f_card {
         width: calc(100% / 3);
     }
-
 
     .all_rest_card {
         display: flex;
