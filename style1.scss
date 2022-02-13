@@ -81,6 +81,7 @@ main {
             flex-wrap: nowrap;
             background-color: white;
             overflow: hidden;
+            transition: 2s;
             &:hover .valid {
                 width: 60px;
             }
@@ -100,6 +101,9 @@ main {
                 &:hover {
                     width: calc(100% - 60px);
                 }
+                &:hover .txt{
+                    width: calc(100% - 60px);
+                }
                 .prix {
                     margin-right: 25px;
                     display: flex;
@@ -115,6 +119,11 @@ main {
                     overflow: hidden;
                     text-overflow: ellipsis;
                     margin-right: 20px;
+                    width: 100%;
+                    transition: 2s;
+                    &:hover{
+                        width: calc(100% - 60px);
+                    }
                     h4 {
                         width: 100%;
                         margin: 0px;
@@ -140,11 +149,11 @@ main {
                 color: white;
                 background-color: #99e2d0;
                 font-size: 0px;
-                transition-duration: 2s;
+                transition-duration: 3s;
                 transition-property: width;
             }
             .circle {
-                transition-duration: 2s;
+                transition-duration: 3s;
                 transition-property: font-size, transform;
             }
         }
