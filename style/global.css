@@ -11,6 +11,10 @@ body {
   /* footer */
 }
 
+body a {
+  text-decoration: none;
+}
+
 body .logo {
   font-family: shrikhand;
   font-size: 35px;

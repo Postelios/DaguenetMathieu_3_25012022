@@ -151,7 +151,7 @@ main .all_eat_card .eat_card:hover .valid {
 }
 
 main .all_eat_card .eat_card:hover .circle {
-  font-size: 30px;
+  font-size: 25px;
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
 }
@@ -190,7 +190,6 @@ main .all_eat_card .eat_card .txt {
 }
 
 main .all_eat_card .eat_card .txt h4 {
-  margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -198,7 +197,6 @@ main .all_eat_card .eat_card .txt h4 {
 }
 
 main .all_eat_card .eat_card .txt p {
-  margin: 0px;
   margin-top: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
