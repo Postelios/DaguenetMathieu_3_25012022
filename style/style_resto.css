@@ -190,7 +190,6 @@ main .all_eat_card .eat_card .txt {
 }
 
 main .all_eat_card .eat_card .txt h4 {
-  width: 100%;
   margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
