@@ -6,6 +6,9 @@ header {
         align-items: center;
         background-color: white;
         padding-left: 20px;
+        i{
+            color: black;
+        }
     }
     .img_header {
         width: 100%;
@@ -84,27 +87,12 @@ main {
             transition: 1s;
             justify-content: space-between;
             &:hover .valid {
-                width: 60px;
+                width: 90px;
             }
             &:hover .circle {
-                font-size: 20px;
+                font-size: 30px;
                 transform: rotate(1turn);
             }
-            /*.all_txt {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                padding-left: 15px;
-                transition-duration: 1s;
-                transform-origin: left;
-                transition-property: width;
-                &:hover {
-                    width: calc(100% - 60px);
-                }
-                &:hover .txt{
-                    width: calc(100% - 60px);
-                }*/
                 .prix {
                     display: flex;
                     align-items: flex-end;
@@ -124,9 +112,6 @@ main {
                     margin-right: 20px;
                     width: 100%;
                     transition: 1s;
-                    &:hover{
-                        width: calc(100% - 60px);
-                    }
                     h4 {
                         width: 100%;
                         margin: 0px;
@@ -159,7 +144,7 @@ main {
                 transition-property: width;
             }
             .circle {
-                transition-duration: 0.8s;
+                transition-duration: 1s;
                 transition-property: font-size, transform;
             }
         }
