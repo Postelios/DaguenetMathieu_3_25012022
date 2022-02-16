@@ -135,6 +135,24 @@ main .all_eat_card .eat_card {
   overflow: hidden;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /*.all_txt {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding-left: 15px;
+                transition-duration: 1s;
+                transform-origin: left;
+                transition-property: width;
+                &:hover {
+                    width: calc(100% - 60px);
+                }
+                &:hover .txt{
+                    width: calc(100% - 60px);
+                }*/
 }
 
 main .all_eat_card .eat_card:hover .valid {
@@ -147,36 +165,7 @@ main .all_eat_card .eat_card:hover .circle {
           transform: rotate(1turn);
 }
 
-main .all_eat_card .eat_card .all_txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding-left: 15px;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition-property: width;
-  transition-property: width;
-}
-
-main .all_eat_card .eat_card .all_txt:hover {
-  width: calc(100% - 60px);
-}
-
-main .all_eat_card .eat_card .all_txt:hover .txt {
-  width: calc(100% - 60px);
-}
-
-main .all_eat_card .eat_card .all_txt .prix {
-  margin-right: 25px;
+main .all_eat_card .eat_card .prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +178,11 @@ main .all_eat_card .eat_card .all_txt .prix {
   font-weight: bold;
 }
 
-main .all_eat_card .eat_card .all_txt .txt {
+main .all_eat_card .eat_card .prix p {
+  margin: 0px 25px 6px 0px;
+}
+
+main .all_eat_card .eat_card .txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,24 +198,26 @@ main .all_eat_card .eat_card .all_txt .txt {
   transition: 1s;
 }
 
-main .all_eat_card .eat_card .all_txt .txt:hover {
+main .all_eat_card .eat_card .txt:hover {
   width: calc(100% - 60px);
 }
 
-main .all_eat_card .eat_card .all_txt .txt h4 {
+main .all_eat_card .eat_card .txt h4 {
   width: 100%;
   margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin: 8px 0px 2px 10px;
 }
 
-main .all_eat_card .eat_card .all_txt p.plat {
+main .all_eat_card .eat_card .txt p {
   margin: 0px;
   margin-top: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin: 2px 0px 6px 10px;
 }
 
 main .all_eat_card .eat_card .valid {
