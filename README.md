@@ -1,4 +1,7 @@
 # projet-2
 
 2e projet de la formation developeur web d'Openclassroom
-le css est générée a partir de sass et vscode
+intégration de la maquette mobile et des annimations.
+liberté de choix pour le loader et pour les versions tablette et desktop
+
+le css est généré à partir de scss et vscode et de l'extension Live Sass Compiler
