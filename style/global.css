@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap");
+* {
+  font-family: roboto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body {
+  margin: 0px;
+  /* footer */
+}
+
+body .logo {
+  font-family: shrikhand;
+  font-size: 35px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0px;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+body .vide {
+  position: absolute;
+  opacity: 1;
+}
+
+body .vide:hover {
+  color: transparent;
+  mix-blend-mode: lighten;
+  background: linear-gradient(170deg, #eb72da, #9f5adb);
+}
+
+body .plein {
+  color: transparent;
+}
+
+body .heart:hover > .plein {
+  color: black;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #353535;
+  padding: 20px 20px 30px 20px;
+}
+
+body footer a {
+  text-decoration: none;
+  color: white;
+}
+
+body .footer_logo {
+  font-family: shrikhand;
+  font-size: 20px;
+  color: white;
+}
+
+body .footer_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  body footer {
+    padding-left: 0px;
+  }
+  body .footer_logo {
+    margin-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .footer_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 40px 0;
+  }
+}
+/*# sourceMappingURL=global.css.map */
