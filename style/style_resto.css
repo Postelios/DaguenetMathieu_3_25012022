@@ -90,9 +90,6 @@ main .commander {
 main .commander:hover {
   -webkit-box-shadow: -11px 11px 7px #888888d6;
           box-shadow: -11px 11px 7px #888888d6;
-}
-
-main .commander:hover {
   background: linear-gradient(175deg, #f0a2e5 30%, #be88ee 100%);
 }
 

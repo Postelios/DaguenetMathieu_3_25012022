@@ -59,12 +59,11 @@ main {
         align-items: center;
         font-size: 20px;
         @include shadow($colour: #8888887a);
+        &:hover{
+            @include shadow-hover;
+            background: linear-gradient(175deg, #f0a2e5 30%, #be88ee 100%);
+        }
     }
-
-   .commander:hover{
-        background: linear-gradient(175deg, #f0a2e5 30%, #be88ee 100%);
-    }
-
     .title {
         display: flex;
         flex-direction: row;
@@ -97,6 +96,9 @@ main {
             transition: 1s;
             justify-content: space-between;
             @include shadow;
+            &:hover{
+                @include shadow-hover;
+            }
             &:hover .valid {
                 width: 90px;
             }
