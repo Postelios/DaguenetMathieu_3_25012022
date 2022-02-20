@@ -1,0 +1,11 @@
+
+$main-colour:#8888882e;
+$main-param: 5px 6px 7px ;
+$hover-shadow: -11px 11px 7px;
+$hover-colour: #888888d6;
+@mixin shadow($param : $main-param, $colour : $main-colour) {
+    box-shadow: $param $colour; 
+    &:hover{
+        box-shadow: $hover-shadow $hover-colour;
+    }   
+}

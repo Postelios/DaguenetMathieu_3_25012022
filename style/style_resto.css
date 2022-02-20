@@ -83,6 +83,17 @@ main .commander {
       -ms-flex-align: center;
           align-items: center;
   font-size: 20px;
+  -webkit-box-shadow: 5px 6px 7px #8888887a;
+          box-shadow: 5px 6px 7px #8888887a;
+}
+
+main .commander:hover {
+  -webkit-box-shadow: -11px 11px 7px #888888d6;
+          box-shadow: -11px 11px 7px #888888d6;
+}
+
+main .commander:hover {
+  background: linear-gradient(175deg, #f0a2e5 30%, #be88ee 100%);
 }
 
 main .title {
@@ -144,6 +155,13 @@ main .all_eat_card .eat_card {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-shadow: 5px 6px 7px #8888882e;
+          box-shadow: 5px 6px 7px #8888882e;
+}
+
+main .all_eat_card .eat_card:hover {
+  -webkit-box-shadow: -11px 11px 7px #888888d6;
+          box-shadow: -11px 11px 7px #888888d6;
 }
 
 main .all_eat_card .eat_card:hover .valid {

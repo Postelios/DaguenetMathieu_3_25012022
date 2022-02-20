@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
     animation-name: load;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
     color: black;
  }
@@ -42,6 +42,7 @@
     0% {
         z-index: 10;
         opacity: 1;
+        font-family: shrikhand;
     }
     98% {
         z-index: 10;
@@ -50,6 +51,7 @@
     100% {
         z-index: -1;
         opacity: 0;
+        font-family: shrikhand;
     }
 }
 
@@ -93,8 +95,7 @@
 
 .but_explor {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto 0px auto ;
     width: 250px;
     height: 60px;
     justify-content: center;
@@ -102,10 +103,14 @@
     border-radius: 60px / 60px;
     border: none;
     color: white;
-    margin-top: 30px;
     align-items: center;
     font-size: 20px;
-    box-shadow: 1px 3px 10px 1px #888888ad;
+    box-shadow: 3px 5px 10px 1px #8888887a;
+}
+
+.but_explor:hover{
+    box-shadow:  -11px 11px 7px #888888d6;
+    background: linear-gradient(175deg, #f0a2e5 30%, #be88ee 100%);
 }
 
 /* partie fonctionnement */
@@ -151,12 +156,17 @@
     padding-left: 50px;
     column-gap: 50px;
     align-items: center;
-    box-shadow: 0px 0px 6px 1px #888888;
-    border-color: #eaeaea;
+    box-shadow: 5px 6px 7px #8888882e;
+    border-color: transparent;
 }
 
 .txt_f_card:hover {
     background-color: #f5edff;
+    box-shadow:  -11px 11px 7px #888888d6;
+}
+
+.txt_f_card:hover .fas{
+    color: #9356dc;
 }
 
 /* card des restaurants */
@@ -186,12 +196,16 @@ a .rest_card {
     height: 250px;
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0px 0px 6px 0px #0000002e;
+    box-shadow: 5px 6px 7px #8888882e;
+}
+
+a .rest_card:hover{
+    box-shadow:  -11px 11px 7px #888888d6;
 }
 
 .rest_img {
     position: relative;
-    height: 75%;
+    height: 70%;
     width: 100%;
 }
 
@@ -203,18 +217,14 @@ a .rest_card {
 }
 
 .new {
-    right: 15px;
+    right: 13px;
     position: absolute;
-    top: 20px;
-    border: 1px solid;
+    top: 13px;
     color: #058a69;
     background-color: #99e2d0;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
-    width: 65px;
-    height: 25px;
-    padding-top: 10px;
-    text-align: center;
+    padding: 5px 10px;
 }
 
 .rest_txt {
@@ -230,6 +240,7 @@ a .rest_card {
 
 .name {
     font-weight: bold;
+    padding-bottom: 5px;
 }
 
 .heart {

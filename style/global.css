@@ -51,7 +51,7 @@ body .vide {
 body .vide:hover {
   color: transparent;
   mix-blend-mode: lighten;
-  background: linear-gradient(170deg, #eb72da, #9f5adb);
+  background: linear-gradient(170deg, #9f5adb, #eb72da);
 }
 
 body .plein {
@@ -73,12 +73,13 @@ body footer {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #353535;
-  padding: 20px 20px 30px 20px;
+  padding: 20px 20px 50px 20px;
 }
 
 body footer a {
   text-decoration: none;
   color: white;
+  padding-top: 5px;
 }
 
 body .footer_logo {
